@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASILI | An Oons Event</title>
+    <meta
+      name="description"
+      content="ASILI is an Oons event built for music, culture, night energy, and coastal festival heat."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas class="beat-field" aria-hidden="true"></canvas>
+    <div class="cursor-light" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+    <button class="audio-toggle" type="button" data-audio-toggle aria-pressed="false">
+      Beat Off
+    </button>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="ASILI home">
+        <span class="brand-mark">A</span>
+        <span>ASILI</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#lineup">Lineup</a>
+        <a href="#experience">Experience</a>
+        <a href="#tickets">Tickets</a>
+        <a href="#partners">Partners</a>
+      </nav>
+      <a class="nav-ticket" href="https://mostwanted.hustlesasa.shop" target="_blank" rel="noopener">Get Tickets</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="ASILI event introduction">
+        <img class="hero-image" src="assets/stage-render-wide.png" alt="ASILI main stage render at Ngong Racecourse">
+        <div class="hero-scrim"></div>
+        <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+        <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">An Oons Event</p>
+          <h1>ASILI</h1>
+          <p class="hero-copy">
+            Where rhythm meets roots. Where strangers become tribe. A ritual, a frequency, and a feeling built for the ones who arrive open and leave connected.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="https://mostwanted.hustlesasa.shop" target="_blank" rel="noopener">Buy Passes</a>
+            <a class="button button-secondary" href="#lineup">View Lineup</a>
+          </div>
+          <div class="sound-meter" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Event details">
+          <span>20 Jun 2026</span>
+          <strong>Ngong Racecourse</strong>
+          <span>Music / Culture / Nightlife</span>
+        </div>
+        <div class="stage-hud" aria-hidden="true">
+          <span>MAIN STAGE</span>
+          <span>124 BPM</span>
+          <span>GATES 18:00</span>
+        </div>
+      </section>
+
+      <section class="countdown-section" aria-label="Countdown to ASILI">
+        <div class="section-inner countdown-grid">
+          <div>
+            <p class="section-kicker">The countdown</p>
+            <h2>When the gates open, the night moves as one.</h2>
+          </div>
+          <div class="countdown" data-event-date="2026-06-20T18:00:00+03:00" aria-live="polite">
+            <div><strong data-days>000</strong><span>Days</span></div>
+            <div><strong data-hours>00</strong><span>Hours</span></div>
+            <div><strong data-minutes>00</strong><span>Min</span></div>
+            <div><strong data-seconds>00</strong><span>Sec</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="visuals-section" aria-label="ASILI artist and festival visuals">
+        <div class="visual-card visual-artist">
+          <img src="assets/dankie-official-poster.png" alt="Dankie Boi ASILI artist poster">
+          <div>
+            <p class="section-kicker">Headliner visual</p>
+            <h2>Dankie Boi for ASILI.</h2>
+          </div>
+        </div>
+        <div class="visual-card visual-artist">
+          <img src="assets/kabza-official-poster.png" alt="Kabza De Small ASILI artist poster">
+          <div>
+            <p class="section-kicker">Artist visual</p>
+            <h2>Kabza De Small joins the frequency.</h2>
+          </div>
+        </div>
+        <div class="visual-card visual-artist">
+          <img src="assets/skillz-official-poster.png" alt="Skillz ASILI artist poster">
+          <div>
+            <p class="section-kicker">Artist visual</p>
+            <h2>Skillz in the ASILI circle.</h2>
+          </div>
+        </div>
+        <div class="visual-card visual-crowd">
+          <img src="assets/asili-crowd-tent.png" alt="Kenyan festival crowd under a tent">
+          <div>
+            <p class="section-kicker">The crowd</p>
+            <h2>Under the tent, where strangers become tribe.</h2>
+          </div>
+        </div>
+        <div class="visual-card visual-crowd">
+          <img src="assets/asili-dancing-crowd.png" alt="ASILI crowd dancing at night">
+          <div>
+            <p class="section-kicker">The floor</p>
+            <h2>Nairobi in the sound.</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee" aria-label="ASILI highlights">
+        <div class="marquee-track">
+          <span>Where rhythm meets roots</span>
+          <span>Strangers become tribe</span>
+          <span>A ritual</span>
+          <span>A frequency</span>
+          <span>A feeling</span>
+          <span>Afro-house</span>
+          <span>Live percussion</span>
+          <span>Food village</span>
+          <span>Fashion drops</span>
+          <span>Sunset warmup</span>
+          <span>After-dark stage</span>
+          <span>Afro-house</span>
+          <span>Live percussion</span>
+          <span>Food village</span>
+          <span>Fashion drops</span>
+        </div>
+      </section>
+
+      <section class="manifesto" aria-label="ASILI manifesto">
+        <div class="section-inner manifesto-grid">
+          <p>Where rhythm meets roots.</p>
+          <p>Where strangers become tribe.</p>
+          <p>A ritual. A frequency. A feeling.</p>
+          <p>One ground. One pulse. One night at Ngong Racecourse.</p>
+        </div>
+      </section>
+
+      <section class="stage-section" aria-label="ASILI main stage">
+        <img src="assets/main-stage-jd.png" alt="ASILI main stage render">
+        <div class="stage-copy">
+          <p class="section-kicker">Main stage</p>
+          <h2>One stage. Big sound. Roots under open sky.</h2>
+          <p>Designed for the night peak at Ngong Racecourse, with warm light, heavy sound, and clear views from the floor.</p>
+        </div>
+      </section>
+
+      <section id="lineup" class="section lineup-section">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">Lineup</p>
+            <h2>Sounds from the root to the rave.</h2>
+          </div>
+          <div class="lineup-list">
+            <article class="artist-card featured">
+              <img class="artist-photo" src="assets/dankie-official-poster.png" alt="ASILI poster artwork for Dankie Boi">
+              <div class="artist-wave" aria-hidden="true"></div>
+              <span class="artist-brand">ASILI</span>
+              <span>Headliner</span>
+              <h3>Dankie Boi</h3>
+              <p>Oons energy, amapiano bounce, and a full-floor set made for June heat.</p>
+            </article>
+            <article class="artist-card">
+              <img class="artist-photo" src="assets/skillz-official-poster.png" alt="ASILI poster artwork for Skillz">
+              <div class="artist-wave" aria-hidden="true"></div>
+              <span class="artist-brand">ASILI</span>
+              <span>Featured Set</span>
+              <h3>Skillz</h3>
+              <p>Roots, rhythm, and pressure for the Oons frequency.</p>
+            </article>
+            <article class="artist-card">
+              <div class="artist-wave" aria-hidden="true"></div>
+              <img class="artist-photo" src="assets/kabza-official-poster.png" alt="ASILI poster artwork for Kabza De Small">
+              <span class="artist-brand">ASILI</span>
+              <span>Special Guest</span>
+              <h3>Kabza De Small</h3>
+              <p>Piano royalty touching the ASILI stage.</p>
+            </article>
+            <article class="artist-card">
+              <div class="artist-wave" aria-hidden="true"></div>
+              <span class="artist-brand">ASILI</span>
+              <span>DJ Set</span>
+              <h3>Suraj</h3>
+              <p>Afro-house rooted in rhythm and texture.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section experience-section">
+        <div class="section-inner split-layout">
+          <div class="section-heading">
+            <p class="section-kicker">Experience</p>
+            <h2>Not just a stage. A full festival circuit.</h2>
+          </div>
+          <div class="experience-grid">
+            <article>
+              <span>01</span>
+              <h3>Main Stage</h3>
+              <p>Heavy lighting, big sound, and an open-air Ngong Racecourse stage designed for a midnight peak.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Social Yard</h3>
+              <p>A warm meeting point for conversations, photos, drinks, and the tribe between sets.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Main Bar</h3>
+              <p>Fast access to drinks inside the grounds, with clear flow from the dance floor.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Content Moments</h3>
+              <p>Photo-ready zones and creator-friendly moments built into the event flow.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="tent-section" aria-label="ASILI crowd under the tent">
+        <img src="assets/asili-crowd-tent.png" alt="Festivalgoers under a tent at an ASILI-style night event">
+      </section>
+
+      <section class="tent-words" aria-label="ASILI tent words">
+        <div class="section-inner">
+          <h2>Where strangers become tribe.</h2>
+          <p>Warm lights. Shared tables. One ground, one pulse, one night at Ngong Racecourse.</p>
+        </div>
+      </section>
+
+      <section class="party-gallery" aria-label="ASILI party gallery">
+        <img src="assets/asili-party-crowd.png" alt="People partying at ASILI">
+        <img src="assets/asili-dancing-crowd.png" alt="People dancing at ASILI">
+        <div class="gallery-copy">
+          <p class="section-kicker">Gallery mood</p>
+          <h2>Come with your people. Leave with a tribe.</h2>
+        </div>
+      </section>
+
+      <section id="tickets" class="section tickets-section">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">Tickets</p>
+            <h2>Choose your pass.</h2>
+          </div>
+          <div class="ticket-grid">
+            <article class="ticket-card">
+              <p>Wave 1</p>
+              <h3>First Wave</h3>
+              <strong>KES 2,500</strong>
+              <span>Early access price</span>
+              <a class="button button-primary" href="https://mostwanted.hustlesasa.shop" target="_blank" rel="noopener">Reserve</a>
+            </article>
+            <article class="ticket-card hot">
+              <p>At the gate</p>
+              <h3>Gate Pass</h3>
+              <strong>KES 3,500</strong>
+              <span>Available while capacity lasts</span>
+              <a class="button button-primary" href="https://mostwanted.hustlesasa.shop" target="_blank" rel="noopener">Reserve</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section section" aria-label="ASILI event guide">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">Event guide</p>
+            <h2>Everything you need before the gates open.</h2>
+          </div>
+          <div class="guide-grid">
+            <article>
+              <span>01</span>
+              <h3>Tickets</h3>
+              <p>All passes are available through Most Wanted on HustleSasa.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Security</h3>
+              <p>We will have enough trained security on site, plus controlled entry and support points around the venue.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Transport</h3>
+              <p>Plan your ride early. Drop-off and pickup guidance will be shared before event day.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Food & Drinks</h3>
+              <p>Bars and food vendors will be available inside the event grounds.</p>
+            </article>
+            <article>
+              <span>05</span>
+              <h3>What To Bring</h3>
+              <p>Your ticket confirmation, charged phone, good shoes, and the right energy.</p>
+            </article>
+            <article>
+              <span>06</span>
+              <h3>Weather</h3>
+              <p>Come ready for a June night outdoors at Ngong Racecourse.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="partners" class="brands-section section" aria-label="ASILI partner brands">
+        <div class="section-inner">
+          <p class="section-kicker">Brands we are working with</p>
+          <div class="brand-strip">
+            <span>Jack Daniel's</span>
+            <span>Enigma</span>
+            <span>Most Wanted</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="social-section section" aria-label="Follow ASILI on Instagram">
+        <div class="section-inner social-card">
+          <div>
+            <p class="section-kicker">Follow the frequency</p>
+            <h2>@asiliexperience</h2>
+            <p>Join the build-up, artist drops, ticket updates, and night-before energy.</p>
+          </div>
+          <div class="social-stat">
+            <strong>12.8K</strong>
+            <span>IG family for now</span>
+          </div>
+          <a
+            class="button button-primary"
+            href="https://www.instagram.com/asiliexperience?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener"
+          >Follow Us</a>
+        </div>
+      </section>
+
+      <section id="info" class="section info-section">
+        <div class="section-inner info-grid">
+          <div>
+            <p class="section-kicker">Event info</p>
+            <h2>Everything close, loud, and easy to find.</h2>
+          </div>
+          <dl>
+            <div>
+              <dt>Date</dt>
+              <dd>Saturday, 20 June 2026</dd>
+            </div>
+            <div>
+              <dt>Time</dt>
+              <dd>6PM until late</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Ngong Racecourse, Nairobi</dd>
+            </div>
+            <div>
+              <dt>Age</dt>
+              <dd>18+ only</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>ASILI</span>
+      <p>An Oons Event. Built for the night.</p>
+      <a href="mailto:hello@asili.events">hello@asili.events</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
