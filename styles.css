@@ -567,6 +567,12 @@ h3 {
     radial-gradient(circle at 22% 22%, rgba(216, 155, 74, 0.18), transparent 28%);
 }
 
+.visuals-section .visual-card.visual-artist::before {
+  background:
+    linear-gradient(180deg, rgba(5, 5, 5, 0.02) 0 34%, rgba(5, 5, 5, 0.92) 66%, rgba(5, 5, 5, 0.98) 100%),
+    radial-gradient(circle at 22% 18%, rgba(216, 155, 74, 0.12), transparent 24%) !important;
+}
+
 .visual-card:hover img {
   transform: scale(1.04);
 }
@@ -580,8 +586,8 @@ h3 {
 
 .artist-caption {
   justify-self: start;
-  padding: 9px 12px;
-  background: rgba(9, 6, 4, 0.72);
+  padding: 10px 13px;
+  background: rgba(9, 6, 4, 0.96);
   border: 1px solid rgba(247, 234, 215, 0.2);
   backdrop-filter: blur(10px);
 }
