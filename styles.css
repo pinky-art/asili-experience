@@ -149,15 +149,12 @@ a {
   letter-spacing: 0.08em;
 }
 
-.brand-mark {
-  display: grid;
-  width: 36px;
-  height: 36px;
-  place-items: center;
-  border: 2px solid var(--ink);
-  background: var(--red);
-  color: var(--black);
-  transform: rotate(-7deg);
+.brand-logo {
+  width: 74px;
+  height: 54px;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 0 14px rgba(214, 168, 79, 0.28));
 }
 
 .nav-links {
@@ -302,11 +299,11 @@ p {
 h1 {
   margin-bottom: 10px;
   font-family: Anton, Impact, sans-serif;
-  font-size: clamp(6rem, 24vw, 18rem);
-  line-height: 0.78;
+  font-size: clamp(4.6rem, 15vw, 11rem);
+  line-height: 0.82;
   letter-spacing: 0;
   text-transform: uppercase;
-  text-shadow: 7px 7px 0 var(--red), -3px 0 0 rgba(214, 168, 79, 0.72);
+  text-shadow: 5px 5px 0 var(--red), -2px 0 0 rgba(214, 168, 79, 0.72);
   animation: titlePulse 2.8s steps(2, end) infinite;
 }
 
@@ -531,7 +528,7 @@ h3 {
 
 .visuals-section {
   display: grid;
-  grid-template-columns: repeat(5, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
   gap: 1px;
   min-height: 78svh;
   background: rgba(248, 244, 236, 0.14);
@@ -578,9 +575,39 @@ h3 {
 }
 
 .visual-card h2 {
-  max-width: 760px;
+  max-width: 520px;
   margin-bottom: 0;
-  text-shadow: 4px 4px 0 rgba(184, 79, 42, 0.72);
+  font-size: clamp(1.65rem, 3vw, 3.2rem);
+  text-shadow: 3px 3px 0 rgba(184, 79, 42, 0.72);
+}
+
+.about-section {
+  background:
+    linear-gradient(135deg, rgba(216, 155, 74, 0.1), rgba(125, 138, 77, 0.08)),
+    var(--charcoal);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1fr);
+  gap: clamp(24px, 6vw, 74px);
+  align-items: start;
+}
+
+.about-grid h2 {
+  font-size: clamp(2.1rem, 5vw, 4.4rem);
+}
+
+.about-copy {
+  display: grid;
+  gap: 16px;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.8vw, 1.16rem);
+  line-height: 1.65;
+}
+
+.about-copy p {
+  margin-bottom: 0;
 }
 
 .motion-dancers {
@@ -763,7 +790,11 @@ h3 {
 .stage-copy {
   position: relative;
   z-index: 2;
-  width: min(100%, 820px);
+  width: min(100%, 680px);
+}
+
+.stage-copy h2 {
+  font-size: clamp(2rem, 5vw, 4.2rem);
 }
 
 .stage-copy p:last-child {
@@ -882,14 +913,14 @@ h3 {
   max-width: 92%;
   margin: 8px 0 6px;
   font-family: Anton, Impact, sans-serif;
-  font-size: clamp(1.65rem, 3.2vw, 3.8rem);
+  font-size: clamp(1.25rem, 2.4vw, 2.5rem);
   line-height: 0.95;
   text-transform: uppercase;
   text-shadow: 3px 3px 0 rgba(9, 6, 4, 0.78);
 }
 
 .artist-card.featured h3 {
-  font-size: clamp(2.1rem, 4.6vw, 4.8rem);
+  font-size: clamp(1.7rem, 3.3vw, 3.4rem);
 }
 
 .artist-brand {
@@ -1049,11 +1080,12 @@ h3 {
   left: clamp(18px, 5vw, 72px);
   right: clamp(18px, 5vw, 72px);
   bottom: clamp(32px, 7vw, 84px);
-  max-width: 900px;
+  max-width: 620px;
 }
 
 .gallery-copy h2 {
-  text-shadow: 5px 5px 0 rgba(184, 79, 42, 0.7);
+  font-size: clamp(1.9rem, 5vw, 4rem);
+  text-shadow: 4px 4px 0 rgba(184, 79, 42, 0.7);
 }
 
 .tickets-section {
@@ -1271,6 +1303,12 @@ h3 {
   font-size: 2rem;
 }
 
+.footer-logo {
+  width: 86px;
+  height: 62px;
+  object-fit: contain;
+}
+
 .site-footer p {
   margin: 0;
 }
@@ -1421,6 +1459,7 @@ h3 {
   }
 
   .countdown-grid,
+  .about-grid,
   .split-layout,
   .info-grid,
   .manifesto-grid,
@@ -1464,7 +1503,7 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(5.2rem, 31vw, 8.5rem);
+    font-size: clamp(4rem, 22vw, 6.8rem);
   }
 
   .button {
