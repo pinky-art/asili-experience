@@ -527,14 +527,14 @@ h3 {
   display: grid;
   grid-template-columns: repeat(4, minmax(240px, 1fr));
   gap: 1px;
-  min-height: 82svh;
   background: rgba(248, 244, 236, 0.14);
   overflow-x: auto;
 }
 
 .visual-card {
   position: relative;
-  min-height: 620px;
+  min-height: 0;
+  aspect-ratio: 4 / 5;
   display: grid;
   align-items: end;
   overflow: hidden;
@@ -679,7 +679,7 @@ h3 {
 
 .visual-artist img {
   object-fit: contain;
-  object-position: center;
+  object-position: center top;
 }
 
 .marquee {
@@ -1300,7 +1300,6 @@ h3 {
   .split-layout,
   .info-grid,
   .manifesto-grid,
-  .visuals-section,
   .guide-grid,
   .brand-strip,
   .party-gallery,
@@ -1314,7 +1313,8 @@ h3 {
   }
 
   .visual-card {
-    min-height: 560px;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
   }
 
   .countdown {
