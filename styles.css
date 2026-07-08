@@ -255,6 +255,10 @@ a {
   animation: heroDrift 18s ease-in-out infinite alternate;
 }
 
+.hero-video {
+  background: #050505;
+}
+
 .hero-scrim {
   background:
     linear-gradient(90deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.28) 48%, rgba(0, 0, 0, 0.72)),
@@ -950,7 +954,8 @@ h3 {
 
 .moments-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-flow: dense;
   gap: clamp(10px, 1.6vw, 18px);
 }
 
@@ -961,6 +966,14 @@ h3 {
   overflow: hidden;
   border: 1px solid rgba(247, 234, 215, 0.16);
   background: #050505;
+}
+
+.moments-grid figure:nth-child(3n) {
+  grid-row: span 2;
+}
+
+.moments-grid figure:nth-child(5n) {
+  grid-column: span 2;
 }
 
 .moments-grid figure:nth-child(even) {
@@ -978,6 +991,47 @@ h3 {
 .moments-grid figure:hover img {
   transform: scale(1.04);
   filter: saturate(1.14) contrast(1.12);
+}
+
+.reviews-section {
+  background:
+    radial-gradient(circle at 8% 20%, rgba(216, 155, 74, 0.14), transparent 32%),
+    linear-gradient(135deg, rgba(247, 234, 215, 0.06), rgba(184, 79, 42, 0.12)),
+    #050505;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 3vw, 28px);
+  align-items: start;
+}
+
+.review-card {
+  display: grid;
+  gap: 18px;
+}
+
+.review-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid rgba(216, 155, 74, 0.36);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
+}
+
+.review-card blockquote {
+  margin: 0;
+  padding: clamp(18px, 3vw, 26px);
+  border-left: 3px solid var(--gold);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.review-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.7vw, 1.24rem);
+  line-height: 1.55;
 }
 
 .tickets-section {
@@ -1517,6 +1571,7 @@ h3 {
   .brand-strip,
   .moments-grid,
   .party-gallery,
+  .reviews-grid,
   .social-card,
   .ticket-grid {
     grid-template-columns: 1fr;
@@ -1525,6 +1580,8 @@ h3 {
   .moments-grid figure,
   .moments-grid figure:nth-child(even) {
     min-height: 360px;
+    grid-column: auto;
+    grid-row: auto;
     transform: none;
   }
 
