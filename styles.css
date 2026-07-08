@@ -1126,6 +1126,167 @@ h3 {
   background: var(--charcoal);
 }
 
+.faq-hero {
+  position: relative;
+  min-height: 76svh;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  isolation: isolate;
+  padding-top: 130px;
+}
+
+.faq-hero img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.12) saturate(0.95) brightness(0.74);
+}
+
+.faq-hero::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(9, 6, 4, 0.88), rgba(9, 6, 4, 0.36) 52%, rgba(9, 6, 4, 0.76)),
+    linear-gradient(180deg, rgba(9, 6, 4, 0.1), rgba(9, 6, 4, 0.95));
+}
+
+.faq-hero-content {
+  display: grid;
+  max-width: 860px;
+  gap: 18px;
+}
+
+.faq-hero h1 {
+  margin-bottom: 0;
+  font-size: clamp(3.6rem, 11vw, 9rem);
+  line-height: 0.88;
+}
+
+.faq-hero p:not(.section-kicker) {
+  max-width: 680px;
+  color: rgba(247, 234, 215, 0.84);
+  font-size: clamp(1rem, 2vw, 1.22rem);
+  line-height: 1.6;
+}
+
+.faq-section {
+  background:
+    linear-gradient(135deg, rgba(184, 79, 42, 0.12), rgba(125, 138, 77, 0.08)),
+    #080604;
+}
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.45fr) minmax(0, 1fr);
+  gap: clamp(22px, 5vw, 54px);
+  align-items: start;
+}
+
+.faq-aside {
+  position: sticky;
+  top: 110px;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.faq-aside h2 {
+  margin-bottom: 22px;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+}
+
+.faq-aside dl {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  background: var(--line);
+}
+
+.faq-aside dl div {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  background: var(--charcoal);
+}
+
+.faq-aside dt {
+  color: var(--gold);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.faq-aside dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.055);
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.faq-item[open] {
+  border-color: rgba(216, 155, 74, 0.62);
+  background: rgba(255, 255, 255, 0.075);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: clamp(18px, 3vw, 24px);
+  color: var(--ink);
+  font-family: Anton, Impact, sans-serif;
+  font-size: clamp(1.35rem, 3vw, 2.6rem);
+  line-height: 1;
+  list-style: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  color: var(--gold);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.faq-item[open] summary::after {
+  content: "-";
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 clamp(18px, 3vw, 24px) clamp(18px, 3vw, 24px);
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.faq-item a {
+  color: var(--gold);
+  font-weight: 800;
+}
+
 .info-grid dl {
   display: grid;
   gap: 1px;
@@ -1311,6 +1472,7 @@ h3 {
 
   .countdown-grid,
   .split-layout,
+  .faq-layout,
   .info-grid,
   .manifesto-grid,
   .guide-grid,
@@ -1324,6 +1486,11 @@ h3 {
   .visual-card {
     min-height: 0;
     aspect-ratio: 4 / 5;
+  }
+
+  .faq-aside {
+    position: relative;
+    top: auto;
   }
 
   .countdown {
